@@ -26,6 +26,7 @@ function start() {
     startBtn.classList.add("active")
     stopBtn.classList.remove("stopActive")
     lapBtn.classList.remove("stopActive");
+    resetBtn.classList.remove("stopActive")
     clearInterval(startTimer);
     startTimer = setInterval(() => {
         ms++;
@@ -55,11 +56,15 @@ function stop() {
     stopBtn.classList.add("stopActive")
     lapBtn.classList.add("stopActive");
     clearInterval(startTimer)
+    resetBtn.classList.add("stopActive")
 }
 
 function reset() {
+    startBtn.classList.remove("active")
     resetBtn.classList.remove("active")
-    stopBtn.classList.remove("stopActive")
+    resetBtn.classList.add("stopActive")
+    stopBtn.classList.add("stopActive")
+    lapBtn.classList.add("stopActive")
     clearInterval(startTimer)
     hr = min = sec = ms = "0" + 0;
     allLaps = [];
