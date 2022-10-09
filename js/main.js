@@ -20,6 +20,8 @@ lapBtn.addEventListener("click", lap);
 
 function ready() {
     lapBtn.classList.add("stopActive");
+    resetBtn.classList.add("stopActive")
+    stopBtn.classList.add("stopActive")
 }
 
 function start() {
